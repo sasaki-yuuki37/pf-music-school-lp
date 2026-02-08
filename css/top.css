@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*-------------------------------------------
-Mainvisual
+1.ヒーロー Mainvisual 
 -------------------------------------------*/
 .mainvisual {
   background-color: #ffed58;
@@ -32,8 +32,26 @@ Mainvisual
   max-width: 560px;
 }
 
+@media screen and (max-width: 767px) {
+  .mainvisual {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding: 50px 0 90px;
+  }
+  .mainvisual .inner {
+    flex-direction: column;
+  }
+  .mainvisual .text .catchphrase {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .mainvisual .text .description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+
 /*-------------------------------------------
-Reason
+2.選ばれる理由 Reason
 -------------------------------------------*/
 .reason {
   margin-bottom: 80px;
@@ -63,85 +81,227 @@ Reason
   text-align: center;
 }
 
-/*-------------------------------------------
-Service
--------------------------------------------*/
-.service {
-  background-color: #ffed58;
-  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
-  padding: 120px 0;
+@media screen and (max-width: 767px) {
+  .reason {
+    margin-bottom: 40px;
+  }
+  .reason .item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .reason .item li {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+  .reason .item li:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /*-------------------------------------------
-Price
+3.サービス内容
 -------------------------------------------*/
-.price {
+.detail {
   background-color: #ffed58;
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
-  padding: 120px 0;
-  margin: -80px 0 80px;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  padding: 100px 0;
+  margin-bottom: 80px;
 }
-
-/*-------------------------------------------
-Service Price 共通
--------------------------------------------*/
-.service-price-item {
+.detail .item {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.service-price-item .img {
-  width: 50%;
+.detail .item .img {
+  width: 55%;
+  margin-right: 5%;
 }
-.service-price-item .img img {
+.detail .item .img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
-.service-price-item .text {
-  width: 50%;
-  background-color: #fff;
-  padding: 20px 30px;
+.detail .item .text {
+  width: 40%;
 }
-.service-price-item .text .section-title-l {
-  margin-bottom: 20px;
-}
-.service-price-item .text .section-title-l .en {
-  display: block;
+.detail .item .text .title {
   font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
-.service-price-item .text .section-title-l .ja {
-  display: block;
-  font-size: 12px;
-  font-weight: 400;
-}
-.service-price-item .description {
-  font-size: 14px;
+.detail .item .text .description {
   line-height: 1.8;
-  margin-bottom: 20px;
 }
-.service-price-item .btn {
-  background-color: #000;
-  color: #fff;
-  display: inline-block;
-  font-size: 14px;
-  padding: 10px 30px;
-  position: relative;
+@media screen and (max-width: 767px) {
+  .detail {
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    padding: 80px 0;
+    margin-bottom: 40px;
+  }
+  .detail .item {
+    flex-direction: column;
+  }
+  .detail .item .img {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+  .detail .item .text {
+    width: 100%;
+  }
+  .detail .item .text .title {
+    text-align: center;
+  }
 }
-.service-price-item .btn::after {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-top: solid 2px #fff;
-  border-right: solid 2px #fff;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 18px;
-  right: 18px;
+/*-------------------------------------------
+4.ご利用の流れ
+-------------------------------------------*/
+.flow {
+  margin-bottom: 100px;
+}
+.flow .item {
+  display: flex;
+  margin-bottom: 50px;
+}
+.flow .item .step {
+  width: 160px;
+  height: 140px;
+  background-color: #ffed58;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  font-weight: 700;
+  flex-shrink: 0;
+  padding-top: 20px;
+  margin-right: 7%;
+  text-align: center;
+}
+.flow .item .step .title {
+  display: block;
+  font-size: 18px;
+}
+.flow .item .step .no {
+  display: block;
+  font-size: 56px;
+}
+.flow .item .text dt {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.flow .item .text dd {
+  line-height: 1.8;
+}
+.flow .item .text a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .flow {
+    margin-bottom: 40px;
+  }
+  .flow .item {
+    margin-bottom: 30px;
+  }
+  .flow .item .step {
+    width: 80px;
+    height: 80px;
+    padding-top: 10px;
+    margin-right: 20px;
+  }
+  .flow .item .step .title {
+    font-size: 14px;
+  }
+  .flow .item .step .no {
+    font-size: 32px;
+  }
+  .flow .item .text dt {
+    font-size: 18px;
+  }
+  .flow .item .text dd {
+    font-size: 14px;
+  }
 }
 
 /*-------------------------------------------
-Voice
+5.料金 price
+-------------------------------------------*/
+.plan-table {
+  overflow-x: auto;
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
+.plan-table .table {
+  width: 900px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+.plan-table .table th,
+.plan-table .table td {
+  border: solid 1px #707070;
+  padding: 20px;
+}
+.plan-table .table thead th {
+  background-color: #fafafa;
+  font-weight: 500;
+}
+.plan-table .table thead th:first-child {
+  width: 300px;
+  background-color: #fff;
+  border-left: none;
+  border-top: none;
+}
+.plan-table .table thead th:nth-child(n + 2) {
+  width: 200px;
+}
+.plan-table .table tbody th {
+  background-color: #fafafa;
+  font-weight: 500;
+  text-align: left;
+}
+.plan-table .table tbody td {
+  font-size: 18px;
+  text-align: center;
+}
+.plan-table .table tbody td .title {
+  display: block;
+  font-size: 14px;
+}
+.plan-table .table tbody td .price-amount {
+  font-size: 24px;
+  font-weight: 500;
+}
+.plan-table .table tbody td .tax {
+  font-size: 12px;
+}
+.plan-table .table tbody td .note {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .plan-table {
+    margin-bottom: 40px;
+  }
+  .plan-table .table {
+    width: 600px;
+  }
+  .plan-table .table th,
+  .plan-table .table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .plan-table .table thead th:first-child {
+    width: 150px;
+  }
+  .plan-table .table thead th:nth-child(n + 2) {
+    width: 150px;
+  }
+  .plan-table .table tbody td {
+    font-size: 14px;
+  }
+  .plan-table .table tbody td .price {
+    font-size: 18px;
+  }
+}
+
+/*-------------------------------------------
+6.利用者の声 Voice
 -------------------------------------------*/
 .voice {
   margin-bottom: 80px;
@@ -194,86 +354,7 @@ Voice
   text-align: right;
 }
 
-/*-------------------------------------------
-スマートフォン
--------------------------------------------*/
 @media screen and (max-width: 767px) {
-  /*-------------------------------------------
-  Mainvisual
-  -------------------------------------------*/
-  .mainvisual {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    padding: 50px 0 90px;
-  }
-  .mainvisual .inner {
-    flex-direction: column;
-  }
-  .mainvisual .text .catchphrase {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  .mainvisual .text .description {
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-
-  /*-------------------------------------------
-  Reason
-  -------------------------------------------*/
-  .reason {
-    margin-bottom: 40px;
-  }
-  .reason .item {
-    flex-direction: column;
-    align-items: center;
-  }
-  .reason .item li {
-    width: 100%;
-    margin: 0 0 40px;
-  }
-  .reason .item li:last-child {
-    margin-bottom: 0;
-  }
-
-  /*-------------------------------------------
-  Service
-  -------------------------------------------*/
-  .service {
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-    padding: 80px 0;
-  }
-  .service .service-price-item {
-    flex-direction: column;
-  }
-
-  /*-------------------------------------------
-  Price
-  -------------------------------------------*/
-  .price {
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
-    padding: 80px 0;
-    margin: -45px 0 40px;
-  }
-  .price .service-price-item {
-    flex-direction: column-reverse;
-  }
-
-  /*-------------------------------------------
-  Service Price 共通
-  -------------------------------------------*/
-  .service-price-item .img {
-    width: 100%;
-  }
-  .service-price-item .img img {
-    object-fit: contain;
-  }
-  .service-price-item .text {
-    width: 100%;
-  }
-
-  /*-------------------------------------------
-  Voice
-  -------------------------------------------*/
   .voice {
     margin-bottom: 40px;
   }
@@ -290,3 +371,99 @@ Voice
     padding: 10px;
   }
 }
+
+/*-------------------------------------------
+7.お問い合わせ
+-------------------------------------------*/
+.contact-form {
+  margin-bottom: 80px;
+}
+.contact-form dt {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact-form dt .require {
+  color: #e52d27;
+  margin-left: 5px;
+}
+.contact-form dd {
+  margin-bottom: 40px;
+}
+.contact-form dd input[type="text"],
+.contact-form dd input[type="email"] {
+  width: 100%;
+  border: solid 1px #ccc;
+  padding: 15px 10px;
+}
+.contact-form dd textarea {
+  width: 100%;
+  height: 200px;
+  border: solid 1px #ccc;
+  padding: 15px 10px;
+}
+.contact-form .radio-group {
+  display: flex;
+  align-items: center;
+}
+.contact-form .radio-group .item-group {
+  margin-right: 40px;
+}
+.contact-form .btn {
+  text-align: center;
+}
+.contact-form .btn input {
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-form {
+    margin-bottom: 40px;
+  }
+  .contact-form dd {
+    margin-bottom: 25px;
+  }
+  .contact-form .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 10px;
+  }
+  .contact-form .radio-group .item-group {
+    margin: 0 0 15px;
+  }
+}
+
+/*-------------------------------------------
+Contact お問い合わせボタン
+-------------------------------------------*/
+.contact {
+  background-color: #ffed58;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  padding: 100px 0 60px;
+}
+.contact .inner {
+  text-align: center;
+}
+.contact .text {
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.contact .btn {
+  background-color: #fff;
+  border: solid 1px #707070;
+  display: inline-block;
+  font-size: 14px;
+  padding: 20px 60px;
+}
+
+/* @media screen and (max-width: 767px) {
+  .service {
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    padding: 80px 0;
+  }
+  .service .service-price-item {
+    flex-direction: column;
+  }
+} */
