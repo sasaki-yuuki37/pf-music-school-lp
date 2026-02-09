@@ -4,7 +4,7 @@
 1.ヒーロー Mainvisual 
 -------------------------------------------*/
 .mainvisual {
-  background-color: #ffed58;
+  background-color: #dceeff;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding: 70px 0 160px;
   margin-bottom: 40px;
@@ -102,7 +102,7 @@
 3.サービス内容
 -------------------------------------------*/
 .detail {
-  background-color: #ffed58;
+  background-color: #dceeff;
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
   padding: 100px 0;
   margin-bottom: 80px;
@@ -163,7 +163,7 @@
 .flow .item .step {
   width: 160px;
   height: 140px;
-  background-color: #ffed58;
+  background-color: #dceeff;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   font-weight: 700;
   flex-shrink: 0;
@@ -439,7 +439,7 @@
 Contact お問い合わせボタン
 -------------------------------------------*/
 .contact {
-  background-color: #ffed58;
+  background-color: #dceeff;
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   padding: 100px 0 60px;
 }
@@ -465,5 +465,4 @@ Contact お問い合わせボタン
   }
   .service .service-price-item {
     flex-direction: column;
-  }
-} */
+  }} */
