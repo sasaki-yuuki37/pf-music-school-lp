@@ -4,10 +4,13 @@
 1.ヒーロー Mainvisual 
 -------------------------------------------*/
 .mainvisual {
-  background-color: #dceeff;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  background-color:  #e5f1fc;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
   padding: 70px 0 160px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  background-image: url(../img/top/piano_main.png);
+  background-size: cover;
+  background-position: right center;
 }
 .mainvisual .inner {
   display: flex;
@@ -20,33 +23,46 @@
   margin-bottom: 20px;
 }
 .mainvisual .text .catchphrase span {
-  background-color: #fff;
+  /* background-color: #fff; */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   display: inline-block;
   margin-bottom: 10px;
 }
 .mainvisual .text .description {
   font-weight: 500;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
-.mainvisual .img {
+/* .mainvisual .img {
   max-width: 560px;
+} */
+
+.cta-btn {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: #485ff5;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 12px;
+  letter-spacing: 0.05rem;
 }
 
 @media screen and (max-width: 767px) {
   .mainvisual {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    padding: 50px 0 90px;
+    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); */
+    padding: 50px 90px 50px 10px;
   }
-  .mainvisual .inner {
+  /*   .mainvisual .inner {
     flex-direction: column;
-  }
+  } */
   .mainvisual .text .catchphrase {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .mainvisual .text .description {
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -54,7 +70,7 @@
 2.選ばれる理由 Reason
 -------------------------------------------*/
 .reason {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 .reason .item {
   display: flex;
@@ -62,7 +78,7 @@
 }
 .reason .item li {
   width: 30%;
-  max-width: 250px;
+  max-width: 300px;
   margin-right: 5%;
 }
 .reason .item li:last-child {
@@ -72,10 +88,15 @@
   margin-bottom: 20px;
 }
 .reason .item li .img img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
   border-radius: 50%;
+  display: block;
 }
+
 .reason .item li .title {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
   margin-bottom: 20px;
   text-align: center;
@@ -102,10 +123,10 @@
 3.サービス内容
 -------------------------------------------*/
 .detail {
-  background-color: #dceeff;
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-  padding: 100px 0;
-  margin-bottom: 80px;
+  background-color: #e5f1fc;
+  /* clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%); */
+  padding: 50px 0;
+  margin-bottom: 100px;
 }
 .detail .item {
   display: flex;
@@ -132,7 +153,7 @@
 }
 @media screen and (max-width: 767px) {
   .detail {
-    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%); */
     padding: 80px 0;
     margin-bottom: 40px;
   }
@@ -163,7 +184,7 @@
 .flow .item .step {
   width: 160px;
   height: 140px;
-  background-color: #dceeff;
+  background-color:  #c8e4ff;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   font-weight: 700;
   flex-shrink: 0;
@@ -306,6 +327,11 @@
 .voice {
   margin-bottom: 80px;
 }
+
+.voice-title{
+  margin-bottom: 40px;
+}
+
 .voice .item {
   display: flex;
   align-items: center;
@@ -313,16 +339,21 @@
   margin-bottom: 40px;
 }
 .voice .item .img {
-  max-width: 182px;
-  margin-right: 40px;
+  width: 230px;
+  height: 230px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .voice .item .img:nth-child(2) {
-  margin-left: 40px;
+  margin-left: 20px;
   margin-right: 0;
 }
 .voice .item .img img {
-  border: solid 1px #ddd;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .voice .item .text {
   max-width: 660px;
@@ -331,6 +362,7 @@
   line-height: 2;
   padding: 20px;
   position: relative;
+  
 }
 .voice .item .text::after {
   content: "";
@@ -359,12 +391,13 @@
     margin-bottom: 40px;
   }
   .voice .item .img {
-    width: 100px;
+    width: 170px;
+    height: 170px;
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .voice .item .img:nth-child(2) {
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .voice .item .text {
     font-size: 14px;
@@ -439,7 +472,7 @@
 Contact お問い合わせボタン
 -------------------------------------------*/
 .contact {
-  background-color: #dceeff;
+  background-color:  #e5f1fc;
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   padding: 100px 0 60px;
 }
