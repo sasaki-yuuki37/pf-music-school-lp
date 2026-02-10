@@ -491,11 +491,4 @@ Contact お問い合わせボタン
   padding: 20px 60px;
 }
 
-/* @media screen and (max-width: 767px) {
-  .service {
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-    padding: 80px 0;
-  }
-  .service .service-price-item {
-    flex-direction: column;
-  }} */
+
