@@ -4,7 +4,7 @@
 1.ヒーロー Mainvisual 
 -------------------------------------------*/
 .mainvisual {
-  background-color:  #e5f1fc;
+  background-color: #e5f1fc;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
   padding: 70px 0 160px;
   margin-bottom: 80px;
@@ -43,7 +43,7 @@
   justify-content: center;
   background-color: #485ff5;
   color: #fff;
-  padding: 10px 30px;
+  padding: 10px 15px;
   border-radius: 12px;
   letter-spacing: 0.05rem;
 }
@@ -184,7 +184,7 @@
 .flow .item .step {
   width: 160px;
   height: 140px;
-  background-color:  #c8e4ff;
+  background-color: #c8e4ff;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   font-weight: 700;
   flex-shrink: 0;
@@ -328,7 +328,7 @@
   margin-bottom: 80px;
 }
 
-.voice-title{
+.voice-title {
   margin-bottom: 40px;
 }
 
@@ -362,7 +362,6 @@
   line-height: 2;
   padding: 20px;
   position: relative;
-  
 }
 .voice .item .text::after {
   content: "";
@@ -472,7 +471,7 @@
 Contact お問い合わせボタン
 -------------------------------------------*/
 .contact {
-  background-color:  #e5f1fc;
+  background-color: #e5f1fc;
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   padding: 100px 0 60px;
 }
@@ -490,5 +489,3 @@ Contact お問い合わせボタン
   font-size: 14px;
   padding: 20px 60px;
 }
-
-
