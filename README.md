@@ -4,7 +4,7 @@ https://sasaki-yuuki37.github.io/pf-music-school-lp/
 # pf-music-school-lp
 
 ピアノ教室の体験レッスン申込を想定した **LP** です。  
-教材の複数ページ構成のデザインをベースに、1ページLPとして再構成しました。
+教材(『HTML&CSS Webデザイン実践入門』)の複数ページ構成のデザインをベースに、1ページLPとして再構成しました。
 
 内容はピアノ教室向けに、文言・画像の差し替えとレイアウト調整を行い、スマホ表示も含めて閲覧しやすいようにレスポンシブ対応しています。
 
@@ -17,3 +17,6 @@ https://sasaki-yuuki37.github.io/pf-music-school-lp/
 ## Tech Stack
 - HTML / CSS
 - JavaScript
+
+## 出典
+- 教材：小豆沢 健『HTML&CSS Webデザイン 現場レベルのコーディング・スキルが身につく実践入門』、技術評論社、2025
